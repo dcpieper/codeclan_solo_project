@@ -4,8 +4,8 @@ from models.game import Game
 from models.publisher import Publisher
 
 def save(publisher):
-    sql = "INSERT INTO publishers (name, contact_details) VALUES (%s, %s) RETURNING *"
-    values = [publisher.name, publisher.contact_details]
+    sql = "INSERT INTO publishers (publisher_name, contact_details) VALUES (%s, %s) RETURNING *"
+    values = [publisher.publisher_name, publisher.contact_details]
     results = run_sql(sql, values)
     id = results[0]['id']
     publisher.id = id
@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        publisher = Publisher(row['name'], row['contact_details'], row['id'])
+        publisher = Publisher(row['publisher_name'], row['contact_details'], row['id'])
         publishers.append(publisher)
     return publishers
 
@@ -29,7 +29,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        publisher = Publisher(result['name'], result['contact_details'], result['id'])
+        publisher = Publisher(result['publisher_name'], result['contact_details'], result['id'])
     return publisher
 
 def delete_all():
@@ -43,7 +43,7 @@ def delete(id):
 
 def update(publisher):
     sql = "UPDATE publishers SET (name, contact_details) = (%s, %s) WHERE id = %s"
-    values = [publisher.name, publisher.contact_details, publisher.id]
+    values = [publisher.publisher_name, publisher.contact_details, publisher.id]
     run_sql(sql, values)
 
 def games(publisher):
@@ -54,6 +54,6 @@ def games(publisher):
     results = run_sql(sql, values)
 
     for row in results:
-        game = Game(row['title'], publisher, row['genre'], row['wholesale'], row['price'], row['stock'], row['id'])
+        game = Game(row['title'], row['developer'], row['publisher_id'], row['genre'], row['wholesale'], row['price'], row['stock'], row['id'])
         games.append(game)
     return games

@@ -10,7 +10,7 @@ publishers_blueprint = Blueprint("publishers", __name__)
 @publishers_blueprint.route("/publishers")
 def publishers():
     publishers = publisher_repository.select_all()
-    return render_template("publishers/index.html", all_publishers = publishers)
+    return render_template("publishers/index.html", publishers = publishers)
 
 @publishers_blueprint.route("/publishers/new", methods=['GET'])
 def new_publisher():
@@ -18,27 +18,27 @@ def new_publisher():
 
 @publishers_blueprint.route("/publishers", methods=['POST'])
 def create_publisher():
-    name = request.form['name']
+    publisher_name = request.form['publisher_name']
     contact_details = request.form['contact_details']
-    publisher = Publisher(name, contact_details)
+    publisher = Publisher(publisher_name, contact_details)
     publisher_repository.save(publisher)
     return redirect('/publishers')
 
 @publishers_blueprint.route("/publishers/<id>", methods=['GET'])
 def show_publisher(id):
     publisher = publisher_repository.select(id)
-    return render_template('/publishers/show.html', showPublisher = publisher)
+    return render_template('publishers/show.html', showPublisher = publisher)
 
 @publishers_blueprint.route("/publishers/<id>/edit", methods=['GET'])
 def edit_publisher(id):
     publisher = publisher_repository.select(id)
-    return render_template('/publishers/edit.html', publisher = publisher)
+    return render_template('publishers/edit.html', publisher = publisher)
 
 @publishers_blueprint.route('/publishers/<id>', methods=['POST'])
 def update_publisher(id):
-    name = request.form['name']
+    publisher_name = request.form['publisher_name']
     contact_details = request.form['contact_details']
-    publisher = Publisher(name, contact_details, id)
+    publisher = Publisher(publisher_name, contact_details, id)
     publisher_repository.update(publisher)
     return redirect ('/publishers')
 

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Edit Game</h2>
+
+<form action="/games/{{ game.id }}" method="POST">
+    <div>
+        <label for="name">Title:</label>
+        <input type="text" id="title" name="title" value="{{ game.title }}">
+    </div>
+    <div>
+        <label for="name">Developer:</label>
+        <input type="text" id="developer" name="developer" value="{{ game.developer }}">
+    </div>
+    <div>
+        <label for="publisher">Publisher:</label>
+        <select name="publisher_id" id="publisher">
+            {% for publisher in publishers %}
+            <option value="{{ publisher.id }}">
+                {{ publisher.publisher_name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="name">Genre:</label>
+        <input type="text" id="genre" name="genre" value="{{ game.genre }}">
+    </div>
+    <div>
+        <label for="name">Wholesale:</label>
+        <input type="text" id="wholesale" name="wholesale" value="{{ game.wholesale }}">
+    </div>
+    <div>
+        <label for="name">Price:</label>
+        <input type="text" id="price" name="price" value="{{ game.price }}">
+    </div>
+    <div>
+        <label for="name">Stock:</label>
+        <input type="text" id="stock" name="stock" value="{{ game.stock }}">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}

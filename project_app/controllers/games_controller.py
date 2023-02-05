@@ -10,12 +10,12 @@ games_blueprint = Blueprint("games", __name__)
 @games_blueprint.route("/games")
 def games():
     games = game_repository.select_all()
-    return render_template("games/index.html", all_games = games)
+    return render_template("games/index.html", games = games)
 
 @games_blueprint.route("/games/new", methods=['GET'])
-def new_task():
+def new_game():
     publishers = publisher_repository.select_all()
-    return render_template("games/new.html", all_publishers = publishers)
+    return render_template("games/new.html", publishers = publishers)
 
 @games_blueprint.route ("/games", methods=['POST'])
 def create_game():
@@ -31,12 +31,19 @@ def create_game():
     game_repository.save(game)
     return redirect('/games')
 
-@games_blueprint.route("/games/<id>", methods=['GET'])
+@games_blueprint.route("/games/<id>")
 def show_game(id):
     game = game_repository.select(id)
-    return render_template('games/show.html', showGame = game)
+    publisher = publisher_repository.select(id)
+    return render_template('games/show.html', game = game, publisher=publisher)
 
-@games_blueprint.route("games/<id>", methods=['POST'])
+@games_blueprint.route("/games/<id>/edit")
+def edit_game(id):
+    game = game_repository.select(id)
+    publishers = publisher_repository.select_all()
+    return render_template("games/edit.html", game = game, publishers = publishers)
+
+@games_blueprint.route("/games/<id>", methods=['POST'])
 def update_game(id):
     title = request.form['title']
     developer = request.form['developer']

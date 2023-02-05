@@ -10,7 +10,6 @@ def save(game):
     results = run_sql(sql, values)
     id = results[0]['id']
     game.id = id
-    return game
 
 def select_all():
     games = []
@@ -25,15 +24,15 @@ def select_all():
     return games
 
 def select(id):
-    game = None
     sql = "SELECT * FROM games WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)[0]
+    results = run_sql(sql, values)
 
-    if result is not None:
+    if results:
+        result = results[0]
         publisher = publisher_repository.select(result['publisher_id'])
         game = Game(result['title'], publisher, result['genre'], result['wholesale'], result['price'], result['stock'], result['id'])
-    return game
+        return game
 
 def delete_all():
     sql = "DELETE FROM games"

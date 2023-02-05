@@ -2,28 +2,22 @@
 
 {% block content %}
 
-{% for game in all_games %}
-    <div class="game">
-        <div class="content">
-            <a href="/games/{{game.id}}">{{ game.title }}</a>
-            {{ game.developer }}
-            <a href="/publishers/{{publisher.id}}">{{ game.publisher.title }}</a>
-            {{ game.genre }}
-            {{ game.wholesale }}
-            {{ game.price }}
-            {{ game.stock }}
-        </div>
-        <div class="buttons">
-            <form class="delete-form" action="/games/{{game.id}}/delete" method="POST">
-                <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden=true></i></button>
-            </form>
-            {% if game.stock == 0 %}
-                <span>Out of Stock &#128683; </span>
-            {% elif game.stock =< 5 and => 0 %}
-                <span> Low Stock &#9888; </span>
-            {% endif %}
-        </div>
-    </div>
+<h2>Games</h2>
+
+{% for game in games %}
+
+<section>
+    <h3>{{ game.title }}</h3>
+    <p>{{ game.publisher.publisher_name }}</p>
+    <a href="/games/{{ game.id }}/edit">Edit</a>
+    <form action="/games/{{ game.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="/games/{{ game.id }}">Details</a>
+</section>
+
+
+
 {% endfor %}
 
 {% endblock %}

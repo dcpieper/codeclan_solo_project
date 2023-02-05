@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ game.title }}</h2>
+<div>
+    <p> Developer: {{ game.developer }}</p>
+    <p> Publisher: {{ game.publisher_id }}</p>
+    <p> Genre: {{ game.genre }}</p>
+    <p> Wholesale Price: {{ game.wholesale }}</p>
+    <p> Selling Price: {{ game.price }}</p>
+    <p> Stock Count: {{ game.stock }}</p>
+</div>
+
+{% endblock %}
