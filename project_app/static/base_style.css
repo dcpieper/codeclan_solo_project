@@ -1,17 +1,18 @@
-body {
-    background: url("/static/images/peakpx.jpg");
+.basebody {
+    background: url("/static/images/desert_background.avif");
     background-repeat: no-repeat;
     background-size: cover;
+    width: calc(100vw);
 }
 
 .gamebutton {
     position: absolute;
-    width: 152px;
-    height: 39px;
+    width: 200px;
+    height: 45px;
     left: 450px;
     top: 414px;
 
-    font-family: 'Inter';
+    font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -27,7 +28,7 @@ body {
     left: 818px;
     top: 414px;
 
-    font-family: 'Inter';
+    font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -39,16 +40,51 @@ body {
 
 .indextitle {
     position: absolute;
-    width: 1500px;
-    height: 77px;
-    left: 200px;
-    top: 100px;
-
-    font-family: 'Inter';
+    width: 1000px;
+    height: 76px;
+    left: 285px;
+    top: 281px;
+    
+    font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
-    line-height: 77px;
+    line-height: 76px;
 
-    color: #FFFFFF; 
+    text-shadow: -1px 1px 0 #000,
+                                1px 1px 0 #000,
+                                1px -1px 0 #000,
+                                -1px -1px 0 #000;
+
+    color: #FFFFFF;
+}
+
+.gameinfo {
+
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    column-gap: 10px;
+    row-gap: 15px;
+
+    font-family: 'Boogaloo';
+
+    text-shadow: -1px 1px 0 #000,
+                                1px 1px 0 #000,
+                                1px -1px 0 #000,
+                                -1px -1px 0 #000;
+
+    color:#FFFFFF
+
+}
+
+#pageheader {
+    font-family: 'Boogaloo';
+
+    text-shadow: -1px 1px 0 #000,
+                                1px 1px 0 #000,
+                                1px -1px 0 #000,
+                                -1px -1px 0 #000;
+
+    color:#FFFFFF
+
 }
