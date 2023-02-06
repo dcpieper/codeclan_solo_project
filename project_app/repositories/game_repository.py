@@ -19,7 +19,7 @@ def select_all():
 
     for row in results:
         publisher = publisher_repository.select(row['publisher_id'])
-        game = Game(row['title'], publisher, row['genre'], row['wholesale'], row['price'], row['stock'], row['id'])
+        game = Game(row['title'], row['developer'], publisher, row['genre'], row['wholesale'], row['price'], row['stock'], row['id'])
         games.append(game)
     return games
 
@@ -31,7 +31,7 @@ def select(id):
     if results:
         result = results[0]
         publisher = publisher_repository.select(result['publisher_id'])
-        game = Game(result['title'], publisher, result['genre'], result['wholesale'], result['price'], result['stock'], result['id'])
+        game = Game(result['title'], result['developer'], publisher, result['genre'], result['wholesale'], result['price'], result['stock'], result['id'])
         return game
 
 def delete_all():

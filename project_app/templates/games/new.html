@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+
 {% block content %}
 
-<h2>Edit Game</h2>
+<h2>New Game</h2>
 
-<form action="/games/{{ game.id }}" method="POST">
+<form action="/games/" method="POST">
     <div>
         <label for="name">Title:</label>
-        <input type="text" id="title" name="title" value="{{ game.title }}">
+        <input type="text" id="title" name="title">
     </div>
     <div>
         <label for="name">Developer:</label>
-        <input type="text" id="developer" name="developer" value="{{ game.developer }}">
+        <input type="text" id="developer" name="developer">
     </div>
     <div>
         <label for="publisher">Publisher:</label>
@@ -24,19 +25,19 @@
     </div>
     <div>
         <label for="name">Genre:</label>
-        <input type="text" id="genre" name="genre" value="{{ game.genre }}">
+        <input type="text" id="genre" name="genre">
     </div>
     <div>
         <label for="name">Wholesale:</label>
-        <input type="text" id="wholesale" name="wholesale" value="{{ game.wholesale }}">
+        <input type="text" id="wholesale" name="wholesale">
     </div>
     <div>
         <label for="name">Price:</label>
-        <input type="text" id="price" name="price" value="{{ game.price }}">
+        <input type="text" id="price" name="price">
     </div>
     <div>
         <label for="name">Stock:</label>
-        <input type="text" id="stock" name="stock" value="{{ game.stock }}">
+        <input type="text" id="stock" name="stock">
     </div>
     <div>
         <input type="submit">

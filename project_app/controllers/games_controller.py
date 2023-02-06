@@ -34,8 +34,7 @@ def create_game():
 @games_blueprint.route("/games/<id>")
 def show_game(id):
     game = game_repository.select(id)
-    publisher = publisher_repository.select(id)
-    return render_template('games/show.html', game = game, publisher=publisher)
+    return render_template('games/show.html', game = game)
 
 @games_blueprint.route("/games/<id>/edit")
 def edit_game(id):
