@@ -29,7 +29,7 @@ def show_publisher(id):
     publisher = publisher_repository.select(id)
     return render_template('publishers/show.html', showPublisher = publisher)
 
-@publishers_blueprint.route("/publishers/<id>/edit", methods=['GET'])
+@publishers_blueprint.route("/publishers/<id>/edit")
 def edit_publisher(id):
     publisher = publisher_repository.select(id)
     return render_template('publishers/edit.html', publisher = publisher)
@@ -40,7 +40,7 @@ def update_publisher(id):
     contact_details = request.form['contact_details']
     publisher = Publisher(publisher_name, contact_details, id)
     publisher_repository.update(publisher)
-    return redirect ('/publishers')
+    return redirect('/publishers')
 
 @publishers_blueprint.route('/publishers/<id>/delete', methods=['POST'])
 def delete_publisher(id):

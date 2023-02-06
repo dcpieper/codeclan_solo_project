@@ -42,7 +42,7 @@ def delete(id):
     run_sql(sql, values)
 
 def update(publisher):
-    sql = "UPDATE publishers SET (name, contact_details) = (%s, %s) WHERE id = %s"
+    sql = "UPDATE publishers SET (publisher_name, contact_details) = (%s, %s) WHERE id = %s"
     values = [publisher.publisher_name, publisher.contact_details, publisher.id]
     run_sql(sql, values)
 

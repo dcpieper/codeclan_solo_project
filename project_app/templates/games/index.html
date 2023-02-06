@@ -15,16 +15,16 @@
     </form>
     <a href="/games/{{ game.id }}">Details</a>
     {% if game.stock >= 6 %}
-        <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        <i class="fa fa-battery-full" style="color:green" aria-hidden="true"></i>
     {% elif game.stock == 0 %}
-        <p>Out of Stock</p>
+        <i class="fa fa-battery-empty" style="color:red" aria-hidden="true"></i>
     {% else %}
-        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-battery-quarter" style="color:orange" aria-hidden="true"></i>
     {% endif %}
 </section>
 
-
-
 {% endfor %}
+
+<a href="/games/new"><button>Add Game</button></a>
 
 {% endblock %}
