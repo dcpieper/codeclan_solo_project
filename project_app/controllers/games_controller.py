@@ -17,7 +17,7 @@ def new_game():
     publishers = publisher_repository.select_all()
     return render_template("games/new.html", publishers = publishers)
 
-@games_blueprint.route ("/games", methods=['POST'])
+@games_blueprint.route("/games", methods=['POST'])
 def create_game():
     title = request.form['title']
     developer = request.form['developer']

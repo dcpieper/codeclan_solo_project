@@ -10,6 +10,7 @@ def save(game):
     results = run_sql(sql, values)
     id = results[0]['id']
     game.id = id
+    return game
 
 def select_all():
     games = []
