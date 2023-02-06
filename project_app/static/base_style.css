@@ -1,0 +1,54 @@
+body {
+    background: url("/static/images/peakpx.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gamebutton {
+    position: absolute;
+    width: 152px;
+    height: 39px;
+    left: 450px;
+    top: 414px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #FFFFFF;
+}
+
+.publisherbutton {
+    position: absolute;
+    width: 204px;
+    height: 39px;
+    left: 818px;
+    top: 414px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #FFFFFF;
+
+}
+
+.indextitle {
+    position: absolute;
+    width: 1500px;
+    height: 77px;
+    left: 200px;
+    top: 100px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #FFFFFF; 
+}
