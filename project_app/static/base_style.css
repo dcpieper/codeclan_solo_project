@@ -1,21 +1,18 @@
-.basebody {
+#basebody {
     background: url("/static/images/desert_background.avif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: calc(100vw);
 }
 
 .gamebutton {
     position: absolute;
-    width: 200px;
+    width: 300px;
     height: 45px;
-    left: 450px;
+    left: 500px;
     top: 414px;
 
     font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 60px;
     line-height: 39px;
 
     color: #FFFFFF;
@@ -23,7 +20,7 @@
 
 .publisherbutton {
     position: absolute;
-    width: 204px;
+    width: 300px;
     height: 39px;
     left: 818px;
     top: 414px;
@@ -31,7 +28,7 @@
     font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 60px;
     line-height: 39px;
 
     color: #FFFFFF;
@@ -48,7 +45,7 @@
     font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 80px;
     line-height: 76px;
 
     text-shadow: -1px 1px 0 #000,
@@ -87,4 +84,80 @@
 
     color:#FFFFFF
 
+}
+
+#basebody {
+    text-decoration: none;
+    color: black
+}
+
+.navbar {
+    text-decoration: none;
+    font-family: 'Boogaloo'
+
+}
+
+.navbar:link {
+    color: white;
+}
+
+.navbar:visited {
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    text-decoration: none;
+}
+
+.publisherinfo {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    column-gap: 10px;
+    row-gap: 15px;
+
+    font-family: 'Boogaloo';
+
+    text-shadow: -1px 1px 0 #000,
+                                1px 1px 0 #000,
+                                1px -1px 0 #000,
+                                -1px -1px 0 #000;
+
+    color:#FFFFFF
+}
+
+#editlink {
+    text-decoration: none
+}
+
+#editlink:link {
+    color: white
+}
+
+#editlink:visited {
+    color: white
+}
+
+.gamedetails {
+    text-decoration: none
+}
+
+.gamedetails:link {
+    color: white
+}
+
+.gamedetails:visited {
+    color: white
+}
+
+.pagetext {
+    color: white;
+    font-family: 'Boogaloo';
+}
+
+.pagetitle {
+
+    color: white;
+    font-family: 'Boogaloo';
+    font-size: 80px
 }

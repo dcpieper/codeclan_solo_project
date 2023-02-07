@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<h2>Publishers</h2>
+<h2 class='pagetitle'>Publishers</h2>
 
 {% for publisher in publishers %}
 
-<section>
+<section class="publisherinfo">
     <h3>{{ publisher.publisher_name }}</h3>
     <p>{{ publisher.contact_details}}</p>
-    <a href="/publishers/{{ publisher.id }}/edit">Edit</a> <form action="/publishers/{{ publisher.id }}/delete" method="POST">
+    <a id="editlink" href="/publishers/{{ publisher.id }}/edit">Edit</a> <form action="/publishers/{{ publisher.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>
 

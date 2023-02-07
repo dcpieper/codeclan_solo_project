@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<h2 id="pageheader">Games</h2>
+<h2 class="pagetitle">Games</h2>
 
 {% for game in games %}
 
 <section class="gameinfo">
     <h3>{{ game.title }}</h3>
     <p>{{ game.publisher.publisher_name }}</p>
-    <a href="/games/{{ game.id }}">Details</a><br>
-    <a href="/games/{{ game.id }}/edit">Edit</a>
+    <a class="gamedetails" href="/games/{{ game.id }}">Details</a><br>
+    <a id="editlink" href="/games/{{ game.id }}/edit">Edit</a>
     <form action="/games/{{ game.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>

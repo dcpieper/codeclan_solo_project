@@ -2,19 +2,19 @@
 
 {% block content %}
 
-<h2>New Game</h2>
+<h2 class ="pagetitle">New Game</h2>
 
 <form action="/games" method="POST">
     <div>
-        <label for="title">Title:</label>
+        <label for="title" class ="pagetext">Title:</label>
         <input type="text" id="title" name="title">
     </div>
     <div>
-        <label for="developer">Developer:</label>
+        <label for="developer" class ="pagetext">Developer:</label>
         <input type="text" id="developer" name="developer">
     </div>
     <div>
-        <label for="publisher">Publisher:</label>
+        <label for="publisher" class ="pagetext">Publisher:</label>
         <select name="publisher_id" id="publisher">
             {% for publisher in publishers %}
             <option value="{{ publisher.id }}">
@@ -24,19 +24,19 @@
         </select>
     </div>
     <div>
-        <label for="genre">Genre:</label>
+        <label for="genre" class ="pagetext">Genre:</label>
         <input type="text" id="genre" name="genre">
     </div>
     <div>
-        <label for="wholesale">Wholesale:</label>
+        <label for="wholesale" class ="pagetext">Wholesale:</label>
         <input type="text" id="wholesale" name="wholesale">
     </div>
     <div>
-        <label for="price">Price:</label>
+        <label for="price" class ="pagetext">Price:</label>
         <input type="text" id="price" name="price">
     </div>
     <div>
-        <label for="stock">Stock:</label>
+        <label for="stock" class ="pagetext">Stock:</label>
         <input type="text" id="stock" name="stock">
     </div>
     <div>
