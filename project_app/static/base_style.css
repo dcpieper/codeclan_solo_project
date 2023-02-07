@@ -95,8 +95,9 @@
                                 1px -1px 0 #000,
                                 -1px -1px 0 #000;
 
-    color:#FFFFFF
+    color:#FFFFFF;
 
+    font-size: 30px
 }
 
 #pageheader {
@@ -118,7 +119,7 @@
 
 .navbar {
     text-decoration: none;
-    font-family: 'Boogaloo'
+    font-family: 'Boogaloo';
 
 }
 
@@ -133,6 +134,8 @@
 .menu {
     list-style: none;
     text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .publisherinfo {
@@ -151,20 +154,25 @@
     color:#FFFFFF
 }
 
-#editlink {
-    text-decoration: none
+.editlink {
+    text-decoration: underline
 }
 
-#editlink:link {
+.editlink:hover {
+
+    text-shadow: 2px 2px 5px red;
+}
+
+.editlink:link {
     color: white
 }
 
-#editlink:visited {
+.editlink:visited {
     color: white
 }
 
 .gamedetails {
-    text-decoration: none
+    text-decoration: underline
 }
 
 .gamedetails:link {
@@ -175,25 +183,53 @@
     color: white
 }
 
+.gamedetails:hover {
+
+    text-shadow: 2px 2px 5px red;
+
+}
 .pagetext {
     color: white;
     font-family: 'Boogaloo';
+    font-size: 30px
 }
 
+.pagetextlink {
+
+    color: white;
+    font-family: 'Boogaloo';
+
+}
 .pagetitle {
 
     color: white;
     font-family: 'Boogaloo';
-    font-size: 80px
+    font-size: 80px;
+    text-decoration: underline 8px
 }
 
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+.gametitle {
+    
+    font-size: 30px;
+}
+
+.publishername {
+
+    font-size: 20px;
+
+}
+
+.instock {
+
+    color: green
+}
+
+.lowstock {
+
+    color: rgba(255, 255, 0, 0.762)
+}
+
+.outofstock {
+
+    color: rgb(125, 8, 8)
 }
