@@ -9,3 +9,7 @@ class Game:
         self.price = price
         self.stock = stock
         self.id = id
+
+    def price_markup(self):
+        price_markup = self.price - self.wholesale
+        return price_markup

@@ -9,7 +9,7 @@
 <section class="publisherinfo">
     <h3>{{ publisher.publisher_name }}</h3>
     <p>{{ publisher.contact_details}}</p>
-    <a id="editlink" href="/publishers/{{ publisher.id }}/edit">Edit</a> <form action="/publishers/{{ publisher.id }}/delete" method="POST">
+    <a class="editlink" href="/publishers/{{ publisher.id }}/edit">Edit</a> <form action="/publishers/{{ publisher.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>
 
