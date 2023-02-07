@@ -2,12 +2,16 @@
     background: url("/static/images/desert_background.avif");
 }
 
+.gamebutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .gamebutton {
     position: absolute;
-    width: 300px;
-    height: 45px;
+    width: 150px;
+    /* height: 45px; */
     left: 500px;
-    top: 414px;
+    top: 450px;
 
     font-family: 'Boogaloo';
     font-style: normal;
@@ -15,31 +19,52 @@
     font-size: 60px;
     line-height: 39px;
 
-    color: #FFFFFF;
+    background-color: rgb(0,119,182);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid black;
+}
+
+.publisherbutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .publisherbutton {
     position: absolute;
-    width: 300px;
-    height: 39px;
+    width: 150px;
+    /* height: 39px; */
     left: 818px;
-    top: 414px;
+    top: 450px;
 
     font-family: 'Boogaloo';
     font-style: normal;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 100px;
     line-height: 39px;
 
-    color: #FFFFFF;
-
+    background-color: rgb(0,119,182);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid black;
 }
 
 .indextitle {
     position: absolute;
-    width: 1000px;
+    width: 1200px;
     height: 76px;
-    left: 285px;
+    left: 200px;
     top: 281px;
     
     font-family: 'Boogaloo';
@@ -160,4 +185,15 @@
     color: white;
     font-family: 'Boogaloo';
     font-size: 80px
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
