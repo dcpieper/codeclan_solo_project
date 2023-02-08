@@ -3,17 +3,20 @@
 {% block content %}
 
 <h2 class="pagetitle">Games</h2>
-
+<div class="gameinfo">
 {% for game in games %}
 
-<section class="gameinfo">
-    <h3 class='gametitle'>{{ game.title }}</h3>
-    <p class='publishername'>{{ game.publisher.publisher_name }}</p>
-    <a class="gamedetails" href="/games/{{ game.id }}">Details</a><br>
-    <a class="editlink" href="/games/{{ game.id }}/edit">Edit</a>
-    <form action="/games/{{ game.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
-    </form>
+
+    <div>
+    <p class='gameinfocontent'>
+        <h3 class='gametitle'>{{ game.title }}</h3>
+        <p class='publishername'>{{ game.publisher.publisher_name }}</p>
+        <a class="gamedetails" href="/games/{{ game.id }}">Details</a><br>
+        <a class="editlink" href="/games/{{ game.id }}/edit">Edit</a>
+        <form action="/games/{{ game.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+    </p>
     {% if game.stock >= 6 %}
         <p class='instock'>In Stock</p>
     {% elif game.stock == 0 %}
@@ -21,10 +24,11 @@
     {% else %}
         <p class='lowstock'>Low Stock</p>
     {% endif %}
-</section>
+    </div>
+
 
 {% endfor %}
-
+</div>
 <a href="/games/new"><button>Add Game</button></a>
 
 {% endblock %}

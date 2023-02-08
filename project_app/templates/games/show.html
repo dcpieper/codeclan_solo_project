@@ -3,13 +3,13 @@
 {% block content %}
 
 <h2 class ="pagetitle">{{ game.title }}</h2>
-<div class="gameinfo">
+<div class="gameinfo1">
     <p> Developer: {{ game.developer }}</p>
     <p> Publisher: {{ game.publisher.publisher_name }}</p>
     <p> Genre: {{ game.genre }}</p>
     <p> Wholesale Price: {{ game.wholesale }}</p>
     <p> Selling Price: {{ game.price }}</p>
-    <p> Price Markup: {{ game.price - game.wholesale }}
+    <p> Price Markup: {% print"{:.2f}".format(((game.price - game.wholesale)/game.wholesale)*100) %}%
     <p> Stock Count: {{ game.stock }}</p>
 </div>
 
