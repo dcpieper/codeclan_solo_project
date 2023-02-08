@@ -3,17 +3,21 @@
 {% block content %}
 
 <h2 class='pagetitle'>Publishers</h2>
-
+<div class='publisherinfo'>
 {% for publisher in publishers %}
 
-<section class="publisherinfo">
-    <h3>{{ publisher.publisher_name }}</h3>
-    <p>{{ publisher.contact_details}}</p>
-    <a class="editlink" href="/publishers/{{ publisher.id }}/edit">Edit</a> <form action="/publishers/{{ publisher.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
-    </form>
+    <div>
+        <p class='publisherinfocontent'>
+        <h3 class='gametitle'>{{ publisher.publisher_name }}</h3>
+        <p>{{ publisher.contact_details}}</p>
+        <a class="editlink" href="/publishers/{{ publisher.id }}/edit">Edit</a> <form action="/publishers/{{ publisher.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+        </p>
+    </div>
 
 {% endfor %}
+</div>
 
 <a href="/publishers/new"><button>Add Publisher</button></a>
 

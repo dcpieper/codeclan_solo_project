@@ -92,18 +92,13 @@
     color:#FFFFFF;
 
     font-size: 30px
-    
+
 }
 .gameinfo {
 
     display: flex;
     justify-content: space-around;
     align-content: center;
-
-    /* grid-template-columns: 100px 50px 100px;
-    grid-template-rows: 80px auto 80px; 
-    column-gap: 10px;
-    row-gap: 15px; */
 
     font-family: 'Boogaloo';
 
@@ -157,6 +152,11 @@
 }
 
 .publisherinfo {
+
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
     grid-template-columns: 100px 50px 100px;
     grid-template-rows: 80px auto 80px; 
     column-gap: 10px;
@@ -257,5 +257,34 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+
+}
+
+.publisherinfocontent {
+
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+.newbutton {
+
+
+    font-family: 'Boogaloo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 39px;
+
+    background-color: rgb(0,119,182);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid black;
 
 }
