@@ -220,16 +220,26 @@
 }
 .pagetitle {
 
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+
     padding-left: 7.7em;
     color: white;
     font-family: 'Boogaloo';
     font-size: 80px;
     text-decoration: underline 8px
+
 }
 
 .gametitle {
     
     font-size: 30px;
+    text-shadow: -1px 1px 0 #000,
+                                1px 1px 0 #000,
+                                1px -1px 0 #000,
+                                -1px -1px 0 #000;
 }
 
 .publishername {
