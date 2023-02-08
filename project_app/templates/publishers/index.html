@@ -6,10 +6,10 @@
 <div class='publisherinfo'>
 {% for publisher in publishers %}
 
-    <div>
+    <div class='loopclass'>
         <p class='publisherinfocontent'>
         <h3 class='gametitle'>{{ publisher.publisher_name }}</h3>
-        <p>{{ publisher.contact_details}}</p>
+        <p class='pubcontdet'>{{ publisher.contact_details}}</p>
         <a class="editlink" href="/publishers/{{ publisher.id }}/edit">Edit</a> 
         <p><form action="/publishers/{{ publisher.id }}/delete" method="POST">
             <input type="submit" class='deletebutton' value="Delete">
