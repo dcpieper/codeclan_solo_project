@@ -13,8 +13,8 @@
         <p class='publishername'>{{ game.publisher.publisher_name }}</p>
         <a class="gamedetails" href="/games/{{ game.id }}">Details</a><br>
         <a class="editlink" href="/games/{{ game.id }}/edit">Edit</a>
-        <p class='deletebuttonwhole'><form action="/games/{{ game.id }}/delete" class='deletebutton' method="POST">
-            <input type="submit" value="Delete">
+        <p class='deletebuttonwhole'><form action="/games/{{ game.id }}/delete" method="POST">
+            <input type="submit" class='deletebutton' value="Delete">
         </form>
     </p>
         </p>
